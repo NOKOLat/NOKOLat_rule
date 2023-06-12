@@ -10,7 +10,8 @@ body:
   - type: textarea
     attributes:
       label: 質問箇所
-      description: ルールブックにおける該当箇所を示してください(e.g. 8の字飛行)．該当箇所がない場合は「該当なし」と記入してください．
+      description: ルールブックにおける該当箇所を示してください．該当箇所がない場合は「該当なし」と記入してください．
+      placeholder: e.g. 8の字飛行
     validations:
       required: true
 
@@ -18,6 +19,6 @@ body:
     attributes:
       label: 質問内容
       description: 具体的な質問を記載してください．
-      (e.g. 成功条件に「高度変化が十分小さいこと」とありますが，どのくらいの変化まで許容されますか)
+      placeholder: e.g. 成功条件に「高度変化が十分小さいこと」とありますが，どのくらいの変化まで許容されますか
     validations:
       required: true
