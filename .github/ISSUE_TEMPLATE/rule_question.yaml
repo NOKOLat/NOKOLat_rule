@@ -1,0 +1,23 @@
+name: ルール質問
+description: ルール質問
+labels:
+  - content
+body:
+  - type: markdown
+    attributes:
+      value: |
+        質問は1つのフォームにつき1件とします．守られていない場合には回答しません．
+  - type: textarea
+    attributes:
+      label: 質問箇所
+      description: ルールブックにおける該当箇所を示してください(e.g. 8の字飛行)．該当箇所がない場合は「該当なし」と記入してください．
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: 質問内容
+      description: 具体的な質問を記載してください．
+      (e.g. 成功条件に「高度変化が十分小さいこと」とありますが，どのくらいの変化まで許容されますか)
+    validations:
+      required: true
