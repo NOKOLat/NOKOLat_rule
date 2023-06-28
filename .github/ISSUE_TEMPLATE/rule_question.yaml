@@ -7,7 +7,7 @@ body:
     attributes:
       value: |
         質問は1つのフォームにつき1件とします．守られていない場合には回答しません．
-  - type: textarea
+  - type: input
     attributes:
       label: 質問箇所
       description: ルールブックにおける該当箇所を示してください．該当箇所がない場合は「該当なし」と記入してください．
