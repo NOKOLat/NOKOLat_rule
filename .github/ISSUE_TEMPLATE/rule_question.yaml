@@ -1,5 +1,6 @@
 name: ルール質問
 description: ルール質問
+assignees: "SatoshiRC"
 labels:
   - content
 body:
