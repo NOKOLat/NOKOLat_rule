@@ -1,0 +1,100 @@
+\documentclass[a4paper,12pt,oneside]{jsarticle}
+
+% \usepackage{document}
+\usepackage{caption}
+\usepackage[dvipdfmx]{graphicx}
+% \setcounter{secnumdepth}{3}
+
+
+
+\begin{document}
+\input{00_titlepage.tex}
+\newpage
+\tableofcontents
+\newpage
+
+\section{はじめに}
+本大会は航空研究会に部した新入生が主体となって活動に参加する機会を提供することを目的として開催する．
+新入生のみでチームをつくり部内大会にむけた活動を行い，航空研に定着しアクティブに活動するメンバーとなることを目標とする．
+また，飛行ロボコンにエントリーする上級生にも，飛行ロボコン前の練習機会として活用してもらい，航空研全体の技術向上を目指す．
+
+本ルールブックは第20回全日本学生室内飛行ロボットコンテストの機体レギュレーション，飛行競技ルールをもとに作成した．
+本ルールブックで未定義の用語などはこちらを参照すること．
+
+\section{機体レギュレーション}
+\subsection{機体の分類}
+\paragraph{飛行機}
+固定翼機、羽ばたき機、あるいはオートジャイロのように揚力を発生させるためのプロペラを動力駆動しない回転翼機とする．
+一般部門に参加できる．
+\paragraph{ハイブリット機}
+揚力を固定翼・動力駆動するプロペラその他の装置の組み合わせによって得ており、かつ推進用のプロペラ等を備える機体とする．
+部門によらず参加できる．
+\paragraph{マルチコプター}
+揚力を複数のプロペラによってまかなう機体とする．マルチコプター部門に参加できる．
+
+\paragraph{}ヘリウムガス，その他空気以外の気体の使用を認めない．
+
+\subsection{独立した制御ユニット}
+機体装備品のうち，単独モジュールとして機体から取り外すことができる装備は下記の条件を満たすことで「独立した制御ユニット」として扱うことができる．
+\begin{itemize}
+  \item 独立した制御ユニットを内包できる直方体の3辺の長さの合計が25cm以下である
+  \item バッテリーおよび電動モーターを含まない
+  \item 独立した制御ユニットを取り外した場合であっても，機体構造が大きく変化せず，機体側に操縦用受信機が搭載されている
+\end{itemize}
+センサーの駆動など飛行に直接影響のない電動モーターは審査の上認められる．
+\subsection{質量}
+\paragraph{空虚質量} 救援物資とともに投下されるすべての投下補助器具の質量を含む機体の総質量を指す．ただし，「独立した制御ユニット」の質量は含まない．
+\subsubsection{一般部門}
+\begin{itemize}
+  \item 空虚質量が$250\mathrm{g}$以下であること
+  \item 「独立した制御ユニット」を搭載した機体は，空虚質量が$220\mathrm{g}$以下であること
+\end{itemize}
+\subsubsection{マルチコプター部門}
+\begin{itemize}
+  \item 第20回飛行ロボコンの機体レギュレーションに準拠する
+\end{itemize}
+\subsubsection{質量ペナルティ}
+規定重量を満たせない機体での出場を認めるが式(\ref{eq:weightPenalty}) によるペナルティを課す．
+
+\begin{equation}\label{eq:weightPenalty}
+  質量ペナルティ = 超過質量 \times 10
+\end{equation}
+\subsection{電源}
+\begin{itemize}
+  \item セル数が2以下のLi-Poバッテリーを使用すること
+  \item マルチコプター部門において耐故障制御に挑戦する場合は3セルのLi-Poバッテリーの使用を認める
+  \item その他，チームからの申請により審査の上認めることがある
+\end{itemize}
+\subsection{操縦装置}
+\begin{itemize}
+  \item 技適を有する無線機を使用すること
+  \item 送信機-受信機間の通信が切断されたとき，すべての動力用モーターが停止する機能を有すること
+\end{itemize}
+
+\section{競技時間}
+\begin{itemize}
+  \item 最大飛行時間を4分とする
+  \item 標準飛行時間を3分とする
+  \item 飛行時間を競技開始から終了までの時間とする
+\end{itemize}
+式(\ref{eq:timeScore})により時間点を与える．
+\begin{equation}\label{eq:timeScore}
+  時間点 = (標準飛行時間 - 飛行時間)\times 5
+\end{equation}
+
+\section{順位}
+下記のように順位を決定する
+\begin{enumerate}
+  \item 帰還に成功したチームを上位とする
+  \item メインミッションに成功したチームを上位とする
+  \item ハンズオフ飛行で複数のミッションに成功したチームを上位とする
+  \item 得点の高いチームを上位とする
+  \item 審査員判定
+\end{enumerate}
+得点はすべてのミッションにおける得点と時間点，質量ペナルティの合計とする．
+また，部門間で得点の調整を行う場合がある．
+\section{ミッション(一般部門)}
+\input{02_plane.tex}
+\section{ミッション(マルチコプター部門)}
+\input{03_multicopter.tex}
+\end{document}
