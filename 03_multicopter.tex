@@ -81,6 +81,8 @@
 \paragraph{成功条件}
 \begin{itemize}
 \item 8の字飛行を行うこと
+\item ラインA→ラインB→ラインA→ラインB→ラインAの順に通過すること\newline
+このとき2本あるラインBをそれぞれ1回通過すること
 \end{itemize}
 \paragraph{終了条件}
 \begin{itemize}
@@ -115,3 +117,27 @@
 \begin{itemize}
 \item 帰還が終了したとき競技を終了とする
 \end{itemize}
+
+
+\subsection{フィールド}
+\subsubsection{物資投下エリア}
+物資投下エリア \ref{fig::multicopter::dropArea} に示す．
+黄色の枠の内側が物資投下エリアである．
+高所物資運搬台は写真と同様の位置に配置する．
+当日のフィールドでは図と同じ位置にマーカーを置き物資投下エリアの基準とする．
+\begin{figure}[ht]
+  \centering\includegraphics[width = 50mm,angle=90]{./multicopter_dropArea.png}
+  \caption{物資投下エリア}
+  \label{fig::multicopter::dropArea}
+\end{figure}
+
+\newpage
+\subsubsection{8の字飛行用のポール}
+8の字飛行で使用するポール周辺のフィールド図を図 \ref{fig::multicopter::poleTurn} に示す．
+2本のポールの間（オレンジ線）をラインAとする．
+ポールの外側（青線）をラインBとする．
+\begin{figure}[h]
+  \centering\includegraphics[width=70mm]{multicopter_poleTurn.png}
+  \caption{8の字飛行用のポール}
+  \label{fig::multicopter::poleTurn}
+\end{figure}
