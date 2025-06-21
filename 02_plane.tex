@@ -1,4 +1,6 @@
-
+\subsection{競技の概要}
+参加機体は，離着陸エリアから飛行を開始し，ミッションエリアにて以下に述べるミッションを完了したのち，離着陸エリアに帰還する．
+最大飛行時間内に複数のミッションを行い，機体の性能および操縦性を評価する項目の総合点を競う．
 \subsection{メインミッション}
 \paragraph{成功条件}
 \begin{itemize}
@@ -30,20 +32,22 @@
 \end{itemize}
 
 \subsection{サブミッション}
-自動操縦，手動操縦共通のサブミッションの一覧は以下の通り．
+サブミッションは以下の通り．
 \begin{itemize}
 \item 8の字飛行
 \item 宙返り
 \item 無動力滑空
 \item 救援物資回収
 \item 高所物資回収
+\item ポール旋回
 \item 帰還
 \end{itemize}
 
-手動操縦専用および自動操縦専用ミッションは以下の通り．
+ハンズオフ飛行専用ミッションは以下の通り．
 \begin{itemize}
-\item ポール旋回 (手動操縦専用ミッション)
-\item 水平旋回 (ハンズオフ飛行専用ミッション)
+\item 水平旋回
+\item 上昇旋回
+\item 自動物資投下
 \end{itemize}
 
 \subsubsection{８の字飛行}
@@ -59,7 +63,8 @@
 \end{itemize}
 \paragraph{得点}
 \begin{itemize}
-\item 8の字飛行点 = 200
+\item 8の字飛行点 = 200 + 8の字飛行追加点
+\item ハンズオフ飛行で成功条件を満たしたとき，8の字飛行追加点として600点が与えられる
 \end{itemize}
 \subsubsection{宙返り}
 \paragraph{成功条件}
@@ -95,20 +100,28 @@
 \end{itemize}
 \paragraph{得点}
 \begin{itemize}
-\item 無動力滑空点 = 300 + 50*(滑空時間-10)
+\item 無動力滑空点 = 200 + 50*(滑空時間-10) + 滑空ランキング点
 \item 滑空時間は「パワーオフ」のコールから「パワーオン」のコールまでの時間とする
 \item 滑空時間の上限は20秒とする
+\item 滑空時間の上位には滑空ランキング点を与える
+\begin{itemize}
+  \item 1位　300点
+  \item 2位　200点
+  \item 3位　100点
+\end{itemize}
+\item 同一タイムが複数チーム存在する場合は同順位とし，該当順位の点数をすべての該当チームに与える．
 \end{itemize}
 \paragraph{付記}
 \begin{itemize}
 \item 「パワーオン」のコール後に動力飛行をすること
 \end{itemize}
+
 \subsubsection{救援物資回収}
 \paragraph{成功条件}
 \begin{itemize}
-\item 他のミッションで物資投下エリアに投下した救援物資のうち1つを、機体に手を
-触れない状態で回収し、離着陸エリアに着陸静止すること
-  \item 機体が着陸静止した際に救援物資が離着陸エリア内にあれば、着陸の衝撃等で外れても成功とみなす
+\item 他のミッションで物資投下エリアに投下した救援物資のうち1つを，機体に手を
+触れない状態で回収し，離着陸エリアに着陸静止すること
+  \item 機体が着陸静止した際に救援物資が離着陸エリア内にあれば，着陸の衝撃等で外れても成功とみなす
 \end{itemize}
 \paragraph{終了条件}
 \begin{itemize}
@@ -165,10 +178,11 @@
   \item 図\ref{fig::plane::poleTurn}を参照すること
 \item 機体が離着陸エリアで静止しているときにポールの取り外し，取り付けをピットメンバーがしてもよい
 \end{itemize}
+
 \subsubsection{水平旋回}
 \paragraph{成功条件}
 \begin{itemize}
-\item 自動操縦による水平旋回を行うこと
+\item ハンズオフ飛行による水平旋回を行うこと
 \item 水平旋回中の高度変化が十分小さいこと
 \end{itemize}
 \paragraph{終了条件}
@@ -181,6 +195,65 @@
 \item 水平旋回点 = 水平旋回回数 * 200 + 水平旋回追加点（200点）
 \item 水平旋回追加点は連続して2回旋回した場合に加算される
 \end{itemize}
+
+\subsubsection{上昇旋回}
+\paragraph{成功条件}
+\begin{itemize}
+\item ハンズオフ飛行による上昇旋回を行うこと
+\end{itemize}
+\paragraph{終了条件}
+\begin{itemize}
+\item 次のミッションがコールされること
+\item 成功条件を満たすこと
+\end{itemize}
+\paragraph{得点}
+\begin{itemize}
+\item 上昇旋回点 = 1000
+\end{itemize}
+\paragraph{ミッションプロセス}
+\begin{enumerate}
+  \item 「上昇旋回開始」のコールとともに，ハンズオフ飛行に切り替える
+  \item 競技エリアにおけるポール以下の高度を保ったまま水平旋回を2周行う
+  \item 旋回しながら高度を上げ，キャットウォーク以上の高度に到達する
+  \item キャットウォーク以上の高度を保ったまま，水平旋回を2周行う
+\end{enumerate}
+\paragraph{付記}
+\begin{itemize}
+  \item 旋回方向はミッション記入用紙に記入した方向のみ認められる
+  \item 旋回方向はサブミッション「水平旋回」と逆方向のみ認められる
+  \item 機体の一部でも指定された高度領域を違反したと判断された場合，上昇旋回と認めない
+\end{itemize}
+
+\subsubsection{自動物資投下}
+\paragraph{成功条件}
+\begin{itemize}
+  \item ハンズオフ飛行で離着陸エリアから離陸した機体が物資投下エリアに救援物資を投下すること
+  \item 操縦者による手動操縦で離着陸エリア内で接地し機体が完全に静止すること
+\end{itemize}
+\paragraph{終了条件}
+\begin{itemize}
+  \item ミッション中止のコールがなされること
+  \item 救援物資を投下する前に，手動操縦に切り替えること
+  \item 離着陸エリア外で接地すること
+  \item 離着陸エリアに着陸・静止すること
+\end{itemize}
+\paragraph{得点}
+\begin{itemize}
+  \item 自動物資投下点 = 自動離陸点 + 自動物資投下点 + 着陸点
+  \item 離着陸エリア内で離陸に成功したとき自動離陸点として200点を与える
+  \item ハンズオフ飛行中に救援物資を物資投下エリアに投下できた場合，自動投下点として1000点を与える
+  \item 離着陸エリア内で接地し機体が完全に静止したとき着陸点として100点を与える
+\end{itemize}
+\paragraph{付記}
+\begin{itemize}
+  \item ミッション開始から1分以内に離陸させること
+  \item 本ミッションに挑戦する時間は飛行時間として計測されない
+  \item レフェリーの指示後，「自動離着陸開始」のコールとともに，ハンズオフ飛行に切り替える
+  \item ハンズオフ飛行に切り替えた後，送信機から手を離す
+  \item 物資投下後に手動操縦に切り替え着陸すること
+  \item このミッション挑戦中は機体回収できない
+\end{itemize}
+
 \subsubsection{帰還}
 \paragraph{成功条件}
 \begin{itemize}
@@ -196,10 +269,12 @@
 \item 離着陸エリア内に接地した場合，着陸点として50点を加算する
 \item 離着陸エリア内で静止した場合，停止点として100点を加算する
 \item 滑走路内で着陸静止した場合，滑走路内着陸点として100点を加算する
+\item 接地物に接触した場合，以降の得点を認めない
 \end{itemize}
 \paragraph{付記}
 \begin{itemize}
 \item 帰還が終了したとき競技を終了とする
+\item ただし，「自動物資投下」がコールされたとき同ミッションへの挑戦を認める
 \end{itemize}
 
 \subsection{フィールド}
