@@ -8,11 +8,19 @@ body:
     attributes:
       value: |
         質問は1つのフォームにつき1件とします．守られていない場合には回答しません．
+        
+  - type: input
+    attributes:
+      label: チーム
+      description: 質問者の所属チームを記入してください
+    validations:
+      required: true
+      
   - type: input
     attributes:
       label: 質問箇所
       description: ルールブックにおける該当箇所を示してください．該当箇所がない場合は「該当なし」と記入してください．
-      placeholder: e.g. 8の字飛行
+      placeholder: e.g. 4.3.1 8の字飛行
     validations:
       required: true
 
