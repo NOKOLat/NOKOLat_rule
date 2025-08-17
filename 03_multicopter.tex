@@ -98,6 +98,23 @@
 \item 8の字飛行点 = 400
 \end{itemize}
 
+\subsubsection{耐故障制御}
+\paragraph{成功条件}
+\begin{itemize}
+  \item 動力用モーターが1発以上停止した状態で4秒以上、機体が接地せずに滞空すること
+\end{itemize}
+\paragraph{終了条件}
+\begin{itemize}
+  \item 次のミッションがコールされること
+  \item ミッション中に機体が接地すること
+\end{itemize}
+\paragraph{得点}
+\begin{itemize}
+  \item 滞空時間を「パワーオフ」から「パワーオン」のコールまでの秒数とする
+  \item 滞空時間の条件を８秒とする
+  \item 耐故障制御点 = 400 + 100$\times$滞空時間
+\end{itemize}
+
 \subsubsection{ユニークミッション}
 成功条件や終了条件は後日決定される．
 得点は1~1000点の間で設定される．
